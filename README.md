@@ -3,7 +3,7 @@
 A web-based application that helps users find and filter job listings based on their preferences such as job position, 
 location, work arrangement, job type, and salary range. This project was developed as part of a school requirement using HTML and CSS.
 
-##Live Demo Live Website: https://astounding-tartufo-bd8b9a.netlify.app/
+##Live Demo Live Website: https://stellular-smakager-ae29cd.netlify.app/
 
 ##Features
 
