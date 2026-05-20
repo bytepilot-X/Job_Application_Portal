@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Admin Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   ADMIN   | </p>
+                <button class="logout-btn">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="AdminDashboard.html" class="menu-item "> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="AdminUserManagement.html" class="menu-item"> <i class="fas fa-briefcase"></i> User Management </a>
+
+        <a href="AdminApproval.html" class="menu-item"> <i class="fas fa-calendar"></i> Approvals </a>
+
+        <a href="AdminReport.html" class="menu-item"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="AdminSystemSettings.html" class="menu-item active"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+
+<div class="content-area">
+    <div class="huge-box">
+        <div class="ss-wrap">
+
+            <!-- Title -->
+            <h2 class="ss-title">System Settings</h2>
+
+            <div class="ss-main-row">
+
+                <!-- LEFT CARD -->
+                <div class="ss-card">
+
+                    <!-- Role Permissions -->
+                    <div class="ss-section-title">Role Permissions</div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">Admin Permissions</span>
+                        <input type="checkbox" id="ss-t1" class="ss-toggle-input" checked>
+                        <label for="ss-t1" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">Manage Users</span>
+                        <input type="checkbox" id="ss-t2" class="ss-toggle-input" checked>
+                        <label for="ss-t2" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">Approve/Reject Applications</span>
+                        <input type="checkbox" id="ss-t3" class="ss-toggle-input" checked>
+                        <label for="ss-t3" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">Activate/Deactivate Users</span>
+                        <input type="checkbox" id="ss-t4" class="ss-toggle-input" checked>
+                        <label for="ss-t4" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">View Reports</span>
+                        <input type="checkbox" id="ss-t5" class="ss-toggle-input" checked>
+                        <label for="ss-t5" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <!-- System Preferences -->
+                    <div class="ss-section-gap">
+                        <div class="ss-section-title">System Preferences</div>
+
+                        <div class="ss-toggle-row">
+                            <span class="ss-toggle-label">Light/Dark mode</span>
+                            <input type="checkbox" id="ss-t6" class="ss-toggle-input" checked>
+                            <label for="ss-t6" class="ss-toggle-switch">
+                                <span class="ss-toggle-track"></span>
+                                <span class="ss-toggle-thumb"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT CARD: Notification Settings -->
+                <div class="ss-card">
+
+                    <div class="ss-section-title">Notification Settings</div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">New Applications</span>
+                        <input type="checkbox" id="ss-n1" class="ss-toggle-input" checked>
+                        <label for="ss-n1" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">New Applicants</span>
+                        <input type="checkbox" id="ss-n2" class="ss-toggle-input" checked>
+                        <label for="ss-n2" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                    <div class="ss-toggle-row">
+                        <span class="ss-toggle-label">New Approval</span>
+                        <input type="checkbox" id="ss-n3" class="ss-toggle-input" checked>
+                        <label for="ss-n3" class="ss-toggle-switch">
+                            <span class="ss-toggle-track"></span>
+                            <span class="ss-toggle-thumb"></span>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END CONTENT AREA -->
+
+
+</body>
+</html>

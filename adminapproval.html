@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Admin Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   ADMIN   | </p>
+                <button class="logout-btn">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="AdminDashboard.html" class="menu-item "> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="AdminUserManagement.html" class="menu-item"> <i class="fas fa-briefcase"></i> User Management </a>
+
+        <a href="AdminApproval.html" class="menu-item active"> <i class="fas fa-calendar"></i> Approvals </a>
+
+        <a href="AdminReport.html" class="menu-item"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="AdminSystemSettings.html" class="menu-item"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+<!-- CONTENT AREA -->
+        <div class="content-area">
+            <div class="huge-box">
+
+                <!-- Title -->
+                <h2 class="appr-title">Approvals</h2>
+
+                <!-- Search & Filter Toolbar -->
+                <div class="appr-toolbar">
+                    <div class="appr-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="appr-filter">
+                        <span>Sort by:</span>
+                        <select>
+                            <option>Latest</option>
+                            <option>Oldest</option>
+                            <option>Name A-Z</option>
+                        </select>
+                    </div>
+                    <div class="appr-filter">
+                        <span>Status:</span>
+                        <select>
+                            <option>All</option>
+                            <option>Pending</option>
+                            <option>Approved</option>
+                            <option>Rejected</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Status Summary Cards -->
+                <div class="appr-status-row">
+                    <div class="appr-badge-card is-pending">
+                        <i class="fas fa-clock"></i>
+                        Pending <span class="appr-count">40</span>
+                    </div>
+                    <div class="appr-badge-card is-approved">
+                        <i class="fas fa-check-circle"></i>
+                        Approved <span class="appr-count">70</span>
+                    </div>
+                    <div class="appr-badge-card is-rejected">
+                        <i class="fas fa-times-circle"></i>
+                        Rejected <span class="appr-count">56</span>
+                    </div>
+                </div>
+
+                <!-- Table -->
+                <div class="appr-table-wrapper">
+                    <table class="appr-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- Row 1 - Pending -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">Adrian Ramos</div>
+                                    <div class="appr-email">adrian@gmail.com</div>
+                                </td>
+                                <td>Employer Request</td>
+                                <td>April 12</td>
+                                <td><span class="appr-status s-pending">Pending</span></td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-approve">Approve</button>
+                                        <button class="appr-btn b-reject">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2 - Approved (highlighted) -->
+                            <tr class="appr-row-highlight">
+                                <td>
+                                    <div class="appr-name">Stephen Curry</div>
+                                    <div class="appr-email">stephen@gmail.com</div>
+                                </td>
+                                <td>Employer Request</td>
+                                <td>April 10</td>
+                                <td><span class="appr-status s-approved">Approved</span></td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 3 - Pending -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">Vincent Gabe</div>
+                                    <div class="appr-email">vincent@gmail.com</div>
+                                </td>
+                                <td>Employer Request</td>
+                                <td>April 9</td>
+                                <td><span class="appr-status s-pending">Pending</span></td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-approve">Approve</button>
+                                        <button class="appr-btn b-reject">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 4 - Approved (highlighted) -->
+                            <tr class="appr-row-highlight">
+                                <td>
+                                    <div class="appr-name">Calvin Klein</div>
+                                    <div class="appr-email">calvin@gmail.com</div>
+                                </td>
+                                <td>Employer Request</td>
+                                <td>April 6</td>
+                                <td><span class="appr-status s-approved">Approved</span></td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="appr-pagination">
+                    <button class="btn-page1">Page 1</button>
+                    <div class="pagination">
+                        <button class="pg-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="pg-btn active">1</button>
+                        <button class="pg-btn">2</button>
+                        <button class="pg-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END CONTENT AREA -->
+
+    </div>
+    <!-- END MAIN LAYOUT -->
+
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedules - Quick Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-layout">
+
+    <!-- LEFT SIDEBAR: Navigation -->
+    <aside class="left-sidebar">
+        <nav class="nav">
+            <a href="index.html"><i class="fas fa-search"></i> Browse Jobs</a>
+            <a href="application.html"><i class="fas fa-briefcase"></i> My Applications</a>
+            <a href="schedules.html" class="active"><i class="fas fa-calendar"></i> Schedules</a>
+            <a href="support.html"><i class="fas fa-question-circle"></i> Help/Support</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="schedules-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <h1 class="page-title">My Schedules</h1>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="schedule-filters">
+            <input type="radio" id="all-schedules" name="schedule-filter" checked>
+            <label for="all-schedules" class="filter-tab">
+                <i class="fas fa-list"></i> All Schedules
+            </label>
+            
+            <input type="radio" id="today-schedules" name="schedule-filter">
+            <label for="today-schedules" class="filter-tab">
+                <i class="fas fa-calendar-day"></i> Today
+            </label>
+            
+            <input type="radio" id="upcoming-schedules" name="schedule-filter">
+            <label for="upcoming-schedules" class="filter-tab">
+                <i class="fas fa-calendar-week"></i> Upcoming
+            </label>
+            
+            <input type="radio" id="past-schedules" name="schedule-filter">
+            <label for="past-schedules" class="filter-tab">
+                <i class="fas fa-history"></i> Past
+            </label>
+        </div>
+
+        <!-- Schedules Grid -->
+        <div class="schedules-grid">
+            <!-- Schedule Card 1 - Today -->
+            <div class="schedule-card urgent">
+                <div class="schedule-card-header">
+                    <div class="schedule-date-badge today-badge">
+                        <i class="fas fa-circle"></i> Today
+                    </div>
+                    <div class="interview-id">INT-2026-001</div>
+                </div>
+                
+                <div class="schedule-company">
+                    <img src="Images/capcom.jpg" alt="CAPCOM" class="schedule-company-logo">
+                    <div class="schedule-company-info">
+                        <h3 class="schedule-position">UI/UX Designer</h3>
+                        <p class="schedule-company-name">CAPCOM</p>
+                    </div>
+                </div>
+
+                <div class="schedule-details">
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="detail-label">Time</span>
+                            <span class="detail-value">2:00 PM - 3:30 PM</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="detail-label">Date</span>
+                            <span class="detail-value">April 14, 2026</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">
+                                <span class="type-badge online">Online</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-actions">
+                    <a href="#" class="schedule-btn primary">
+                        <i class="fas fa-video"></i> Join Interview
+                    </a>
+                    <a href="#" class="schedule-btn secondary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                </div>
+            </div>
+
+            <!-- Schedule Card 2 - Today -->
+            <div class="schedule-card urgent">
+                <div class="schedule-card-header">
+                    <div class="schedule-date-badge today-badge">
+                        <i class="fas fa-circle"></i> Today
+                    </div>
+                    <div class="interview-id">INT-2026-002</div>
+                </div>
+                
+                <div class="schedule-company">
+                    <img src="Images/apple.png" alt="Apple" class="schedule-company-logo">
+                    <div class="schedule-company-info">
+                        <h3 class="schedule-position">Product Designer</h3>
+                        <p class="schedule-company-name">Apple</p>
+                    </div>
+                </div>
+
+                <div class="schedule-details">
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="detail-label">Time</span>
+                            <span class="detail-value">5:00 PM - 6:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="detail-label">Date</span>
+                            <span class="detail-value">April 14, 2026</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">
+                                <span class="type-badge onsite">On-site</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-actions">
+                    <a href="#" class="schedule-btn primary">
+                        <i class="fas fa-map-marker-alt"></i> Get Directions
+                    </a>
+                    <a href="#" class="schedule-btn secondary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                </div>
+            </div>
+
+            <!-- Schedule Card 3 - Tomorrow -->
+            <div class="schedule-card">
+                <div class="schedule-card-header">
+                    <div class="schedule-date-badge upcoming-badge">
+                        <i class="fas fa-clock"></i> Tomorrow
+                    </div>
+                    <div class="interview-id">INT-2026-003</div>
+                </div>
+                
+                <div class="schedule-company">
+                    <img src="Images/GOOGLE.jpg" alt="Google" class="schedule-company-logo">
+                    <div class="schedule-company-info">
+                        <h3 class="schedule-position">Graphic Designer</h3>
+                        <p class="schedule-company-name">Google</p>
+                    </div>
+                </div>
+
+                <div class="schedule-details">
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="detail-label">Time</span>
+                            <span class="detail-value">10:00 AM - 11:30 AM</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="detail-label">Date</span>
+                            <span class="detail-value">April 15, 2026</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">
+                                <span class="type-badge online">Online</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-actions">
+                    <a href="#" class="schedule-btn primary">
+                        <i class="fas fa-bell"></i> Set Reminder
+                    </a>
+                    <a href="#" class="schedule-btn secondary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                </div>
+            </div>
+
+            <!-- Schedule Card 4 -->
+            <div class="schedule-card">
+                <div class="schedule-card-header">
+                    <div class="schedule-date-badge upcoming-badge">
+                        <i class="fas fa-clock"></i> Apr 16
+                    </div>
+                    <div class="interview-id">INT-2026-004</div>
+                </div>
+                
+                <div class="schedule-company">
+                    <img src="Images/ubisoft.png" alt="Ubisoft" class="schedule-company-logo">
+                    <div class="schedule-company-info">
+                        <h3 class="schedule-position">Data Analyst</h3>
+                        <p class="schedule-company-name">Ubisoft</p>
+                    </div>
+                </div>
+
+                <div class="schedule-details">
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <span class="detail-label">Time</span>
+                            <span class="detail-value">1:00 PM - 2:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-calendar"></i>
+                        <div>
+                            <span class="detail-label">Date</span>
+                            <span class="detail-value">April 16, 2026</span>
+                        </div>
+                    </div>
+                    <div class="schedule-detail-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <span class="detail-label">Type</span>
+                            <span class="detail-value">
+                                <span class="type-badge onsite">On-site</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="schedule-actions">
+                    <a href="#" class="schedule-btn primary">
+                        <i class="fas fa-bell"></i> Set Reminder
+                    </a>
+                    <a href="#" class="schedule-btn secondary">
+                        <i class="fas fa-info-circle"></i> Details
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>

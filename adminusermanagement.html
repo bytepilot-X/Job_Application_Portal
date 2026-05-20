@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Admin Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   ADMIN   | </p>
+                <button class="logout-btn">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="AdminDashboard.html" class="menu-item "> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="AdminUserManagement.html" class="menu-item active"> <i class="fas fa-briefcase"></i> User Management </a>
+
+        <a href="AdminApproval.html" class="menu-item"> <i class="fas fa-calendar"></i> Approvals </a>
+
+        <a href="AdminReport.html" class="menu-item"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="AdminSystemSettings.html" class="menu-item"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+<div class="content-area">
+    <div class="huge-box">
+
+      <h2 class="page-title">User Management</h2>
+
+      <!-- Filters -->
+      <div class="filters-row">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search" />
+        </div>
+        <div class="filter-group">
+          <span>Role:</span>
+          <select>
+            <option>All</option>
+            <option>User</option>
+            <option>Admin</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="filter-group">
+          <span>Status:</span>
+          <select>
+            <option>All</option>
+            <option>Active</option>
+            <option>Inactive</option>
+          </select>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+
+      <!-- Table -->
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Adrian Ramos</td>
+              <td>adrian@gmail.com</td>
+              <td><span class="badge badge-user">User</span></td>
+              <td class="status-active">Active</td>
+              <td>
+                <div class="actions">
+                  <button class="btn-action btn-view">View</button>
+                  <button class="btn-action btn-activate">Activate</button>
+                  <button class="btn-action btn-deactivate">Deactivate</button>
+                </div>
+              </td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Leon Kennedy</td>
+              <td>leon@gmail.com</td>
+              <td><span class="badge badge-user">User</span></td>
+              <td class="status-active">Active</td>
+              <td>
+                <div class="actions">
+                  <button class="btn-action btn-view">View</button>
+                  <button class="btn-action btn-activate">Activate</button>
+                  <button class="btn-action btn-deactivate">Deactivate</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Vincent Gabe</td>
+              <td>vincent@gmail.com</td>
+              <td><span class="badge badge-user">User</span></td>
+              <td class="status-active">Active</td>
+              <td>
+                <div class="actions">
+                  <button class="btn-action btn-view">View</button>
+                  <button class="btn-action btn-activate">Activate</button>
+                  <button class="btn-action btn-deactivate">Deactivate</button>
+                </div>
+              </td>
+            </tr>
+            <tr class="row-highlight">
+              <td>Stephen Curry</td>
+              <td>stephen@gmail.com</td>
+              <td><span class="badge badge-user">User</span></td>
+              <td class="status-inactive">Inactive</td>
+              <td>
+                <div class="actions">
+                  <button class="btn-action btn-view">View</button>
+                  <button class="btn-action btn-activate">Activate</button>
+                  <button class="btn-action btn-deactivate">Deactivate</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Calvin Klein</td>
+              <td>calvin@gmail.com</td>
+              <td><span class="badge badge-user">User</span></td>
+              <td class="status-active">Active</td>
+              <td>
+                <div class="actions">
+                  <button class="btn-action btn-view">View</button>
+                  <button class="btn-action btn-activate">Activate</button>
+                  <button class="btn-action btn-deactivate">Deactivate</button>
+                </div>
+              </td>
+            </tr>
+            <tr class="empty-row">
+              <td colspan="5"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Footer -->
+        <div class="table-footer">
+          <button class="btn-page1">Page 1</button>
+          <div class="pagination">
+            <button class="pg-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="pg-btn active">1</button>
+            <button class="pg-btn">2</button>
+            <button class="pg-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+</body>
+</html>

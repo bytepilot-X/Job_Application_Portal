@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - Quick Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-layout">
+        <aside class="left-sidebar">
+            <nav class="nav">
+                <a href="index.html"><i class="fas fa-search"></i> Browse Jobs</a>
+                <a href="application.html"><i class="fas fa-briefcase"></i> My Applications</a>
+                <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+                <a href="support.html" class="active"><i class="fas fa-question-circle"></i> Help/Support</a>
+                <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+            </nav>
+        </aside>
+
+    <!-- Main Content -->
+    <div class="support-container">
+        <!-- Hero Section -->
+        <div class="support-hero">
+            <h1 class="support-hero-title">How can we help you?</h1>
+            <p class="support-hero-subtitle">Search our knowledge base or browse categories below</p>
+            <div class="support-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for help articles, FAQs, guides...">
+                <button class="search-submit-btn">Search</button>
+            </div>
+        </div>
+
+        <!-- Quick Help Cards -->
+        <div class="quick-help-section">
+            <h2 class="section-title-quick">Quick Help</h2>
+            <div class="quick-help-grid">
+                <a href="#getting-started" class="help-card">
+                    <div class="help-card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="help-card-title">Getting Started</h3>
+                    <p class="help-card-description">Learn the basics of using Quick Job platform</p>
+                </a>
+                
+                <a href="#applying-jobs" class="help-card">
+                    <div class="help-card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="help-card-title">Applying for Jobs</h3>
+                    <p class="help-card-description">Step-by-step guide to submit applications</p>
+                </a>
+                
+                <a href="#interviews" class="help-card">
+                    <div class="help-card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="help-card-title">Interview Help</h3>
+                    <p class="help-card-description">Tips and guides for your interviews</p>
+                </a>
+                
+                <a href="#account" class="help-card">
+                    <div class="help-card-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="help-card-title">Account Settings</h3>
+                    <p class="help-card-description">Manage your profile and preferences</p>
+                </a>
+            </div>
+        </div>
+        </div>
+</body>
+</html>

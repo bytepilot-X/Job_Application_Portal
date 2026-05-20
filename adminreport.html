@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Admin Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   ADMIN   | </p>
+                <button class="logout-btn">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="AdminDashboard.html" class="menu-item "> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="AdminUserManagement.html" class="menu-item"> <i class="fas fa-briefcase"></i> User Management </a>
+
+        <a href="AdminApproval.html" class="menu-item"> <i class="fas fa-calendar"></i> Approvals </a>
+
+        <a href="AdminReport.html" class="menu-item active"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="AdminSystemSettings.html" class="menu-item"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+<div class="content-area">
+    <div class="huge-box">
+
+        <div class="rpt-wrap">
+
+            <!-- Title -->
+            <h2 class="rpt-title">Reports &amp; Analytics</h2>
+
+            <!-- ── TOP ROW ── -->
+            <div class="rpt-top-row">
+
+                <!-- User Roles Bar Chart -->
+                <div class="rpt-card">
+                    <div class="rpt-card-title">User Roles Chart</div>
+                    <div class="rpt-chart-body">
+                        <div class="rpt-y-axis">
+                            <span>50k</span>
+                            <span>40k</span>
+                            <span>30k</span>
+                            <span>20k</span>
+                            <span>10k</span>
+                            <span>0</span>
+                        </div>
+                        <div class="rpt-bar-chart">
+                            <div class="rpt-bar-col">
+                                <div class="rpt-bar b-blue"></div>
+                                <span class="rpt-bar-lbl">Users</span>
+                            </div>
+                            <div class="rpt-bar-col">
+                                <div class="rpt-bar b-green"></div>
+                                <span class="rpt-bar-lbl">Recruiters</span>
+                            </div>
+                            <div class="rpt-bar-col">
+                                <div class="rpt-bar b-red"></div>
+                                <span class="rpt-bar-lbl">Admins</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total Applications -->
+                <div class="rpt-card rpt-totals-card">
+                    <div class="rpt-total-row">
+                        <span class="rpt-total-label">Total Applications:</span>
+                        <span class="rpt-total-value">5,432</span>
+                    </div>
+                    <div class="rpt-export-row">
+                        <button class="rpt-btn-pdf">Export PDF</button>
+                        <button class="rpt-btn-csv">Export CSV</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ── BOTTOM ROW ── -->
+            <div class="rpt-bottom-row">
+
+                <!-- Activity Overview Line Chart -->
+                <div class="rpt-card">
+                    <div class="rpt-card-title">Activity Overview</div>
+                    <div class="rpt-line-body">
+                        <div class="rpt-line-y">
+                            <span>1,400</span>
+                            <span>1,200</span>
+                            <span>800</span>
+                            <span>400</span>
+                            <span>0</span>
+                        </div>
+                        <div class="rpt-svg-wrap">
+                            <svg class="rpt-line-svg" viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Grid lines -->
+                                <line x1="0" y1="0"   x2="420" y2="0"   stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="0" y1="28"  x2="420" y2="28"  stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="0" y1="57"  x2="420" y2="57"  stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="0" y1="85"  x2="420" y2="85"  stroke="#e5e7eb" stroke-width="1"/>
+                                <line x1="0" y1="113" x2="420" y2="113" stroke="#e5e7eb" stroke-width="1"/>
+                                <!-- Line: June(400)→y=100, July(150)→y=125, Aug(450)→y=95, Sep(800)→y=60, Oct(1350)→y=5, Nov(1350)→y=5, Dec(1150)→y=25 -->
+                                <polyline
+                                    points="10,100 80,125 150,95 220,60 290,5 360,5 415,25"
+                                    fill="none"
+                                    stroke="#04ABFF"
+                                    stroke-width="2.5"
+                                    stroke-linejoin="round"
+                                    stroke-linecap="round"
+                                />
+                                <!-- Dots -->
+                                <circle cx="10"  cy="100" r="4" fill="#04ABFF"/>
+                                <circle cx="80"  cy="125" r="4" fill="#04ABFF"/>
+                                <circle cx="150" cy="95"  r="4" fill="#04ABFF"/>
+                                <circle cx="220" cy="60"  r="4" fill="#04ABFF"/>
+                                <circle cx="290" cy="5"   r="4" fill="#04ABFF"/>
+                                <circle cx="360" cy="5"   r="4" fill="#04ABFF"/>
+                                <circle cx="415" cy="25"  r="4" fill="#04ABFF"/>
+                                <!-- X labels -->
+                                <text x="10"  y="157" font-size="10" fill="#888" text-anchor="middle">June</text>
+                                <text x="80"  y="157" font-size="10" fill="#888" text-anchor="middle">July</text>
+                                <text x="150" y="157" font-size="10" fill="#888" text-anchor="middle">August</text>
+                                <text x="220" y="157" font-size="10" fill="#888" text-anchor="middle">September</text>
+                                <text x="290" y="157" font-size="10" fill="#888" text-anchor="middle">October</text>
+                                <text x="360" y="157" font-size="10" fill="#888" text-anchor="middle">November</text>
+                                <text x="415" y="157" font-size="10" fill="#888" text-anchor="middle">December</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Stats -->
+                <div class="rpt-card rpt-act-card">
+                    <div class="rpt-act-row">
+                        <span class="rpt-act-label">Average Daily Logins :</span>
+                        <span class="rpt-act-value">354</span>
+                    </div>
+                    <hr class="rpt-act-hr">
+                    <div class="rpt-act-row">
+                        <span class="rpt-act-label">Total Applications:</span>
+                        <span class="rpt-act-value">5,000</span>
+                    </div>
+                    <div class="rpt-export-row">
+                        <button class="rpt-btn-pdf">Export PDF</button>
+                        <button class="rpt-btn-csv">Export CSV</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- END BOTTOM ROW -->
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

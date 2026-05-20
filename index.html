@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+            </div>
+
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="page-layout">
+
+    <!-- LEFT SIDEBAR: Navigation -->
+    <aside class="left-sidebar">
+        <nav class="nav">
+            <a href="index.html" class="active"><i class="fas fa-search"></i> Browse Jobs</a>
+            <a href="application.html"><i class="fas fa-briefcase"></i> My Applications</a>
+            <a href="schedules.html"><i class="fas fa-calendar"></i> Schedules</a>
+            <a href="support.html"><i class="fas fa-question-circle"></i> Help/Support</a>
+            <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        </nav>
+    </aside>
+
+    <!-- CENTER: Main Content -->
+    <main class="content-area">
+
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">Discover your ideal job right here!</h1>
+            <p class="hero-subtitle">Explore opportunities that suit your interests.</p>
+            <div class="hero-search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search Jobs...">
+                <button class="hero-search-btn">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Header -->
+        <h2 class="results-header">260 Jobs Results</h2>
+
+        <!-- Job Cards Grid -->
+        <div class="job-grid">
+
+            <!-- Card 1 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/capcom.jpg" alt="CAPCOM" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">CAPCOM <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">UI/UX Designer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$3000/month</div>
+                        <div class="location">Japan, Osaka</div>
+                    </div>
+                    <a href="#job1" class="details-btn">Details</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/apple.png" alt="Apple" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">Apple <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Product Designer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Parttime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$25/hr</div>
+                        <div class="location">United States, California</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/BMW.jpg" alt="BMW" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">BMW <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Product Designer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$1500/month</div>
+                        <div class="location">Germany, Munich</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/ubisoft.png" alt="UBISOFT" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">UBISOFT <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Data Analyst</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Parttime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$40/hr</div>
+                        <div class="location">France, Saint-Mandé</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/GOOGLE.jpg" alt="Google" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">Google <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Graphic Designer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$1800/month</div>
+                        <div class="location">United States, California</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/Paypal.jpg" alt="Paypal" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">Paypal <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Software Engineer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Parttime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$80/hr</div>
+                        <div class="location">United States</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/download.jpg" alt="STEAM" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">STEAM <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Frontend Developer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$2800/month</div>
+                        <div class="location">United States</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/apple.png" alt="Apple" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">Apple <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">iOS Developer</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$4000/month</div>
+                        <div class="location">United States, California</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="job-card">
+                <div class="card-header">
+                    <img src="Images/BMW.jpg" alt="BMW" class="company-logo">
+                    <button class="bookmark-icon"><i class="far fa-bookmark"></i></button>
+                </div>
+                <div class="company-info">
+                    <div class="company-name">BMW <i class="fas fa-check-circle verified-badge"></i></div>
+                    <div class="job-title">Marketing Manager</div>
+                </div>
+                <div class="job-tags">
+                    <span class="job-tag">Onsite</span>
+                    <span class="job-tag">Fulltime</span>
+                </div>
+                <div class="card-footer">
+                    <div class="salary-info">
+                        <div class="salary">$3500/month</div>
+                        <div class="location">Germany, Saint-Mandé</div>
+                    </div>
+                    <button class="details-btn">Details</button>
+                </div>
+            </div>
+
+        </div><!-- end .job-grid -->
+    </main><!-- end .content-area -->
+
+    <!-- RIGHT SIDEBAR: Filter Panel -->
+    <aside class="filter-panel">
+        <div class="filter-header">
+            <h2 class="filter-title">Filter</h2>
+            <button class="clear-btn">Clear All</button>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Filter</h3>
+            <div class="checkbox-group" style="margin-top: 0.75rem;">
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span class="checkbox-label">Newest</span>
+                </label>
+                <label class="checkbox-item">
+                    <input type="checkbox">
+                    <span class="checkbox-label">Oldest</span>
+                </label>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Job Position</h3>
+            <input type="text" class="search-input" placeholder="Search position...">
+            <div class="checkbox-group" style="margin-top: 0.75rem;">
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Frontend Developer</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Backend Developer</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Full Stack Developer</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">UI/UX Designer</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Game Developer</span></label>
+            </div>
+            <button class="show-more-btn">Show more</button>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Job Location</h3>
+            <input type="text" class="search-input" placeholder="Search location...">
+            <div class="checkbox-group" style="margin-top: 0.75rem;">
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Philippines</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Japan</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">United States</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">France</span></label>
+            </div>
+            <button class="show-more-btn">Show more</button>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Job Type</h3>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Full-time</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Part-time</span></label>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Work Arrangement</h3>
+            <div class="checkbox-group">
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">On-site</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Online</span></label>
+                <label class="checkbox-item"><input type="checkbox"><span class="checkbox-label">Hybrid</span></label>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h3 class="section-title">Salary Range</h3>
+            <div class="salary-range">
+                <div class="salary-inputs">
+                    <input type="text" class="salary-input" placeholder="$0" value="$0">
+                    <span class="separator">—</span>
+                    <input type="text" class="salary-input" placeholder="$200k+" value="$150,000">
+                </div>
+                <div class="slider-container">
+                    <input type="range" class="range-slider" min="0" max="200000" value="90000" step="5000">
+                </div>
+            </div>
+        </div>
+    </aside><!-- end .filter-panel -->
+
+</div><!-- end .page-layout -->
+
+
+    <!-- Job Detail Modal 1 -->
+<div id="job1" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Job Details</h2>
+            <a href="#" class="modal-close"><i class="fas fa-times"></i></a>
+        </div>
+        
+        <div class="modal-body">
+            <div class="modal-company-section">
+                <img src="Images/capcom.jpg" alt="CAPCOM" class="modal-company-logo">
+                <div>
+                    <h3 class="modal-company-name">CAPCOM</h3>
+                    <p class="modal-job-position">UI/UX Designer</p>
+                </div>
+            </div>
+            <div class="modal-quick-info">
+                <div class="modal-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span class="info-label">Location</span>
+                        <span class="info-value">Japan, Osaka</span>
+                    </div>
+                </div>
+                <div class="modal-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="info-label">Job Type</span>
+                        <span class="info-value">Full-time</span>
+                    </div>
+                </div>
+                <div class="modal-info-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div>
+                        <span class="info-label">Salary</span>
+                        <span class="info-value">$3000/month</span>
+                    </div>
+                </div>
+                <div class="modal-info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                        <span class="info-label">Work Arrangement</span>
+                        <span class="info-value">On-site</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4 class="modal-section-title">Company Location</h4>
+                <div class="map-container">
+                    <iframe 
+                        class="map-iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.9276834198234!2d135.49517831521817!3d34.70237988043215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6853f0ef009%3A0x5449a02608e73e79!2sCapcom%20Co.%2C%20Ltd.%20Osaka%20Office!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <div class="map-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="map-address"><strong>CAPCOM Osaka Office</strong></p>
+                            <p class="map-address-detail">3-1-3 Uchihiranomachi, Chuo-ku, Osaka 540-0037, Japan</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=Capcom+Osaka" target="_blank" class="map-directions">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4 class="modal-section-title">Requirements</h4>
+                <ul class="modal-list">
+                    <li>Bachelor's degree in Graphic Design, or related field</li>
+                    <li>3+ years of experience in UI/UX design</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h4 class="modal-section-title">Required Documents</h4>
+                <ul class="modal-list document-list">
+                    <li><i class="fas fa-file-alt"></i> Updated Resume</li>
+                    <li><i class="fas fa-folder"></i> Portfolio (PDF)</li>
+                    <li><i class="fas fa-certificate"></i> Certifications</li>
+                </ul>
+            </div>
+
+            <div class="modal-section">
+                <h4 class="modal-section-title">Upload Your Documents</h4>
+                <p class="upload-description">Please upload the required documents.</p>
+                <div class="upload-container">
+                    <!-- Resume Upload -->
+                    <div class="upload-item">
+                        <label for="resume-upload1" class="upload-label">
+                            <div class="upload-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="upload-text">
+                                <span class="upload-title">Resume</span>
+                                <span class="upload-subtitle">PDF</span>
+                            </div>
+                            <input type="file" id="resume-upload1" accept=".pdf" class="upload-input" required>
+                            <div class="upload-button">Choose File</div>
+                        </label>
+                    </div>
+                    <!-- Portfolio Upload -->
+                    <div class="upload-item">
+                        <label for="portfolio-upload1" class="upload-label">
+                            <div class="upload-icon">
+                                <i class="fas fa-folder"></i>
+                            </div>
+                            <div class="upload-text">
+                                <span class="upload-title">Portfolio</span>
+                                <span class="upload-subtitle">PDF</span>
+                            </div>
+                            <input type="file" id="portfolio-upload1" accept=".pdf" class="upload-input" required>
+                            <div class="upload-button">Choose File</div>
+                        </label>
+                    </div>
+                    <!-- Certificates Upload -->
+                    <div class="upload-item">
+                        <label for="cert-upload1" class="upload-label">
+                            <div class="upload-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="upload-text">
+                                <span class="upload-title">Certificates</span>
+                                <span class="upload-subtitle">PDF, JPG, PNG</span>
+                            </div>
+                            <input type="file" id="cert-upload1" accept=".pdf,image/*" class="upload-input" multiple required>
+                            <div class="upload-button">Choose Files</div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#" class="modal-btn-secondary">Close</a>
+                <a href="#apply-success1" class="modal-btn-primary">Apply now</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Apply Success Modal -->
+<div id="apply-success1" class="success-modal">
+    <div class="success-modal-content">
+        <div class="success-icon">
+            <i class="fas fa-check"></i>
+        </div>
+        <h2 class="success-title">Application Submitted!</h2>
+        <p class="success-message">
+            Your application for <strong>UI/UX Designer</strong> at <strong>CAPCOM</strong> has been submitted successfully. You can track your application status in <strong>My Applications</strong>.
+        </p>
+        <a href="#" class="success-btn">Close</a>
+    </div>
+</div>
+
+
+
+    </body>
+</html>
