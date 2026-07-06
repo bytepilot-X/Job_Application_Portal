@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="employer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Employer Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   EMPLOYER   | </p>
+                <a href="login.html" class="logout-btn">LOGOUT</a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="employerDashboard.html" class="menu-item active"> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="employerJobListing.html" class="menu-item"> <i class="fas fa-briefcase"></i> Job Listing </a>
+
+        <a href="employerInterviews.html" class="menu-item"> <i class="fas fa-calendar"></i> Interviews </a>
+
+        <a href="employerApproval.html" class="menu-item"> <i class="fa-solid fa-circle-check"></i> Approvals</a>
+
+        <a href="employerReport.html" class="menu-item"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="employerSystemSettings.html" class="menu-item"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+ <!-- CONTENT AREA -->
+        <div class="main-content-area">
+            <div class="dashboard-wrap">
+
+                <!--  STAT CARDS  -->
+                <div class="stat-cards-row">
+                    <!-- Total Active Job Posts -->
+                    <div class="stat-card sc-blue">
+                        <div class="sc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        </div>
+                        <div class="sc-info">
+                            <div class="sc-label">Active Job Posts</div>
+                            <div class="sc-val">35</div>
+                        </div>
+                    </div>
+                    <!-- Total Applicants -->
+                    <div class="stat-card sc-green">
+                        <div class="sc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/></svg>
+                        </div>
+                        <div class="sc-info">
+                            <div class="sc-label">Total Applicants</div>
+                            <div class="sc-val">156 <span style="font-size:14px;font-weight:600;">/ 268</span></div>
+                            <div class="sc-sub">inactive</div>
+                        </div>
+                    </div>
+                    <!-- Interview Scheduled -->
+                    <div class="stat-card sc-orange">
+                        <div class="sc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5S10.5 3.17 10.5 4v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                        </div>
+                        <div class="sc-info">
+                            <div class="sc-label">Interview Scheduled</div>
+                            <div class="sc-val">18</div>
+                        </div>
+                    </div>
+                    <!-- Jobs Filled -->
+                    <div class="stat-card sc-purple">
+                        <div class="sc-icon">
+                            <svg viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+                        </div>
+                        <div class="sc-info">
+                            <div class="sc-label">Jobs Filled</div>
+                            <div class="sc-val">10</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  MIDDLE ROW  -->
+                <div class="mid-row">
+
+                    <!-- User Management Card -->
+                    <div class="dash-card">
+                        <div class="dash-card-title">Job Listing</div>
+
+                        <div class="dash-filters">
+                            <div class="dash-search">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="Search" />
+                            </div>
+                            <div class="dash-filter">
+                                Status:&nbsp;<select><option>All</option><option>Active</option><option>Inactive</option></select>
+                            </div>
+                        </div>
+
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Adrian Ramos</td>
+                                    <td>adrian@gmail.com</td>
+                                    <td><span class="dash-badge db-user">User</span></td>
+                                    <td class="dash-active">Active</td>
+                                </tr>
+                                <tr class="dash-row-hl">
+                                    <td>Leon Kennedy</td>
+                                    <td>leon@gmail.com</td>
+                                    <td><span class="dash-badge db-user">User</span></td>
+                                    <td class="dash-active">Active</td>
+                                </tr>
+                                <tr>
+                                    <td>Vincent Gabe</td>
+                                    <td>vincent@gmail.com</td>
+                                    <td><span class="dash-badge db-user">User</span></td>
+                                    <td class="dash-active">Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pending Approvals Card -->
+                    <div class="dash-card">
+                        <div class="dash-card-title">Pending Approvals</div>
+
+                        <div class="appr-item">
+                            <input type="checkbox" checked />
+                            <div>
+                                <span class="appr-label">Full-Time</span>
+                                <span class="appr-who">&nbsp;&nbsp;Cruz, Juan - Apr 12</span>
+                            </div>
+                        </div>
+                        <div class="appr-item">
+                            <input type="checkbox" checked />
+                            <div>
+                                <span class="appr-label">Full-Time</span>
+                                <span class="appr-who">&nbsp;&nbsp;Ashcroft, Grace - June 12</span>
+                            </div>
+                        </div>
+
+                        <div class="appr-btns">
+                            <button class="btn-approve-dash">Approve</button>
+                            <button class="btn-reject-dash">Reject</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  REPORTS & ANALYTICS  -->
+                <div class="dash-card">
+                    <div class="dash-card-title">Reports &amp; Analytics</div>
+                    <div class="reports-row">
+
+                        <!-- Bar Chart -->
+                        <div>
+                            <div class="chart-subtitle">Job Categories</div>
+                            <div class="chart-body">
+                                <div class="y-axis-labels">
+                                    <span>50</span>
+                                    <span>40</span>
+                                    <span>30</span>
+                                    <span>20</span>
+                                    <span>10</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="bars-container">
+                                    <div class="bar-col">
+                                        <div class="bar-rect bar-blue"></div>
+                                        <div class="bar-lbl">Software Engineer</div>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar-rect bar-green"></div>
+                                        <div class="bar-lbl">Game Development</div>
+                                    </div>
+                                    <div class="bar-col">
+                                        <div class="bar-rect bar-red"></div>
+                                        <div class="bar-lbl">Cloud Engineer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total Applications -->
+                        <div class="total-apps-box">
+                            <div class="ta-row">
+                                <span class="ta-label">Applications Receieved:</span>
+                                <span class="ta-value">156</span>
+                            </div>
+                            <div class="export-row">
+                                <button class="btn-export-pdf">Export PDF</button>
+                                <button class="btn-export-csv">Export CSV</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

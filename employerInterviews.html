@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="employer.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="Images/quickjob.png" alt="Quick Job Logo" class="logo-image"/>
+                </div>
+                <span class="logo-text">Quick Job</span>
+                <p class="name-color">Employer Panel </p>
+            </div>
+            
+            <div class="header-right">
+                <button class="notification-btn">
+                    <svg class="bell-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                    </svg>
+                </button>
+                <button class="profile-btn">
+                    <img src="Images/frncs.jpg" alt="User profile" class="profile-avatar"/>
+                </button>
+                <p class="name-color">Francis Cañalete     |   EMPLOYER   | </p>
+                <button class="logout-btn">LOGOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-layout">
+<aside class="sidebar">
+    <nav class="sidebar-sections">
+        <a href="employerDashboard.html" class="menu-item"> <i class="fas fa-search"></i> Dashboard </a>
+
+        <a href="employerJobListing.html" class="menu-item"> <i class="fas fa-briefcase"></i> Job Listing </a>
+
+        <a href="employerInterviews.html" class="menu-item active"> <i class="fas fa-calendar"></i> Interviews </a>
+
+        <a href="employerApproval.html" class="menu-item"> <i class="fa-solid fa-circle-check"></i> Approvals</a>
+
+        <a href="employerReport.html" class="menu-item"> <i class="fas fa-question-circle"></i> Reports </a>
+
+        <a href="employerSystemSettings.html" class="menu-item"> <i class="fas fa-user"></i> Settings </a>
+    </nav>
+</aside>
+
+<!-- CONTENT AREA -->
+        <div class="content-area">
+            <div class="huge-box">
+
+                <!-- Title -->
+                <h2 class="appr-title">Interviews</h2>
+
+                <!-- Search & Filter Toolbar -->
+                <div class="appr-toolbar">
+                    <div class="appr-search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="appr-filter">
+                        <span>Sort by:</span>
+                        <select>
+                            <option>All</option>
+                            <option>Upcoming</option>
+                            <option>Today</option>
+                            <option>Past</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                
+
+                <!-- Table -->
+                <div class="appr-table-wrapper">
+                    <table class="appr-table">
+                        <thead>
+                            <tr>
+                                <th>Job Title</th>
+                                <th>Company</th>
+                                <th>Time</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!-- Row 1 - Pending -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">UI/UX Designer</div>
+                                </td>
+                                <td>Bandai Namco</td>
+                                <td>2:00 PM - 3:30 PM</td>
+                                <td><span class="appr-status s-pending">Pending</span></td>
+                                <td>June 5 2026</td>
+                                <td>Online</td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-approve">Approve</button>
+                                        <button class="appr-btn b-reject">Reject</button>
+                                        <button class="appr-btn b-view">Details</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <!-- Row 2 - Pending -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">UI/UX Designer</div>
+                                </td>
+                                <td>Bandai Namco</td>
+                                <td>2:00 PM - 3:30 PM</td>
+                                <td><span class="appr-status s-pending">Pending</span></td>
+                                <td>June 5 2026</td>
+                                <td>Online</td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-approve">Approve</button>
+                                        <button class="appr-btn b-reject">Reject</button>
+                                        <button class="appr-btn b-view">Details</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <!-- Row 3 - Pending -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">UI/UX Designer</div>
+                                </td>
+                                <td>Bandai Namco</td>
+                                <td>2:00 PM - 3:30 PM</td>
+                                <td><span class="appr-status s-pending">Pending</span></td>
+                                <td>June 5 2026</td>
+                                <td>Online</td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-approve">Approve</button>
+                                        <button class="appr-btn b-reject">Reject</button>
+                                        <button class="appr-btn b-view">Details</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                            <!-- Row 4 - Approved  -->
+                            <tr class="appr-row-default">
+                                <td>
+                                    <div class="appr-name">UI/UX Designer</div>
+                                </td>
+                                <td>Bandai Namco</td>
+                                <td>2:00 PM - 3:30 PM</td>
+                                <td><span class="appr-status s-approved">Approved</span></td>
+                                <td>June 5 2026</td>
+                                <td>Online</td>
+                                <td>
+                                    <div class="appr-actions">
+                                        <button class="appr-btn b-view">View</button>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="appr-pagination">
+                    <button class="btn-page1">Page 1</button>
+                    <div class="pagination">
+                        <button class="pg-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="pg-btn active">1</button>
+                        <button class="pg-btn">2</button>
+                        <button class="pg-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- END CONTENT AREA -->
+
+    </div>
+    <!-- END MAIN LAYOUT -->
+
+</body>
+</html>
