@@ -73,7 +73,8 @@
                         </select>
                     </div>
 
-                    <a href="#" class="logout-btn">Set Interview</a>
+                    <a href="#interview-modal" class="logout-btn">Set Interview</a>
+                    
                 </div>
 
                 
@@ -187,10 +188,95 @@
 
             </div>
         </div>
-        <!-- END CONTENT AREA -->
+        
 
     </div>
-    <!-- END MAIN LAYOUT -->
+    
+
+    <!-- SET INTERVIEW MODAL !-->
+<div id="interview-modal" class="pj-overlay">
+    <div class="pj-modal iv-modal">
+
+        <!-- Header -->
+        <div class="pj-header">
+            <div class="pj-logo-box">
+                <i class="fas fa-calendar-check"></i>
+            </div>
+            <div>
+                <div class="pj-company-name">Set Interview</div>
+                <div class="pj-job-title">Fill in the interview details below</div>
+            </div>
+            <a href="#" class="pj-close">&times;</a>
+        </div>
+
+        <!-- Body -->
+        <div class="pj-body">
+
+            <!-- Job Title -->
+            <div class="pj-info-item iv-full">
+                <div class="pj-info-label"><i class="fas fa-briefcase"></i> Job Title</div>
+                <input type="text" placeholder="e.g. UI/UX Designer" />
+            </div>
+
+            <!-- Company Name -->
+            <div class="pj-info-item iv-full">
+                <div class="pj-info-label"><i class="fas fa-building"></i> Company Name</div>
+                <input type="text" placeholder="e.g. Bandai Namco" />
+            </div>
+
+            <!-- Time & Date -->
+            <div class="pj-info-grid">
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-clock"></i> Time</div>
+                    <input type="time" />
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-calendar-alt"></i> Date</div>
+                    <input type="date" />
+                </div>
+            </div>
+
+            <!-- Type -->
+            <div class="pj-info-item iv-full">
+                <div class="pj-info-label"><i class="fas fa-laptop-house"></i> Interview Type</div>
+                <select>
+                    <option value="">Select type...</option>
+                    <option>Online</option>
+                    <option>On-site</option>
+                    <option>Phone Call</option>
+                    <option>Hybrid</option>
+                </select>
+            </div>
+
+            <hr class="pj-divider" />
+
+            <!-- Meeting Link -->
+            <div class="iv-meeting-box">
+                <div class="iv-meeting-header">
+                    <i class="fas fa-video"></i>
+                    <span>Meeting Link</span>
+                </div>
+                <input
+                    type="url"
+                    class="iv-meeting-input"
+                    placeholder="Paste Zoom / Google Meet / Teams link here..."
+                />
+                <p class="iv-meeting-hint">
+                    <i class="fas fa-info-circle"></i>
+                    Optional — only required for Online interviews
+                </p>
+            </div>
+
+        </div>
+
+        
+        <div class="pj-footer">
+            <a href="#" class="btn-pj-cancel">Cancel</a>
+            <a href="#interview-success" class="btn-pj-submit">Set Interview</a>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
