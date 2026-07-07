@@ -68,7 +68,7 @@
             <option>Part-Time</option>
             <option>Admin</option>
           </select>
-          
+          <i class="fas fa-chevron-down"></i>
         </div>
         <div class="filter-group">
           <span>Status:</span>
@@ -80,7 +80,8 @@
           
         </div>
 
-          <a href="#" class="logout-btn">Post Job</a>
+        <a href="#postjob-modal" class="logout-btn">Post Job</a>
+        
       </div>
 
       <!-- Table -->
@@ -189,6 +190,256 @@
       </div>
     </div>
 </div>
+
+
+<div id="postjob-modal" class="pj-overlay">
+    <div class="pj-modal">
+        <div class="pj-header">
+            <div class="pj-logo-box"><i class="fas fa-building"></i></div>
+            <div>
+                <div class="pj-company-name" id="preview-company">Company Name</div>
+                <div class="pj-job-title"    id="preview-title">Job Title</div>
+            </div>
+            <a href="#" class="pj-close">&times;</a>
+        </div>
+        <div class="pj-body">
+            <div class="pj-info-grid">
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-building"></i> Company Name</div>
+                    <input type="text" placeholder="e.g. Bandai Namco" oninput="document.getElementById('preview-company').textContent=this.value||'Company Name'" />
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-briefcase"></i> Job Title</div>
+                    <input type="text" placeholder="e.g. Software Engineer" oninput="document.getElementById('preview-title').textContent=this.value||'Job Title'" />
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-map-marker-alt"></i> Location</div>
+                    <input type="text" placeholder="e.g. Japan, Tokyo" />
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-dollar-sign"></i> Salary</div>
+                    <input type="text" placeholder="e.g. $15,000/month" />
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-clock"></i> Job Type</div>
+                    <select>
+                        <option value="">Select...</option>
+                        <option>Full-time</option>
+                        <option>Part-time</option>
+                        <option>Contract</option>
+                        <option>Internship</option>
+                        <option>Freelance</option>
+                    </select>
+                </div>
+                <div class="pj-info-item">
+                    <div class="pj-info-label"><i class="fas fa-laptop-house"></i> Work Arrangement</div>
+                    <select>
+                        <option value="">Select...</option>
+                        <option>On-site</option>
+                        <option>Remote</option>
+                        <option>Hybrid</option>
+                    </select>
+                </div>
+            </div>
+            <hr class="pj-divider" />
+            <div>
+                <div class="pj-section-title"><i class="fas fa-map-marked-alt"></i> Company Location</div>
+                <div class="pj-map-wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209003.43!2d135.3413!3d34.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8f61e51b97f%3A0xb7c18c659baad62a!2sOsaka%2C%20Japan!5e0!3m2!1sen!2sus!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="pj-address-bar">
+                    <div class="pj-address-left">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div style="flex:1;">
+                            <div class="pj-addr-name">Office Address</div>
+                            <input type="text" id="addr-input" placeholder="e.g. 2-1 Osaki, Shinagawa, Tokyo 141-0032, Japan" />
+                        </div>
+                    </div>
+                    <button class="btn-directions" onclick="var q=document.getElementById('addr-input').value; if(q) window.open('https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q),'_blank')">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </button>
+                </div>
+            </div>
+            <hr class="pj-divider" />
+            <div>
+                <div class="pj-section-title"><i class="fas fa-list-ul"></i> Requirements</div>
+                <div class="pj-req-list" id="req-list">
+                    <div class="pj-req-item"><span class="pj-req-bullet">&#9679;</span><input type="text" placeholder="e.g. Bachelor's degree in Computer Science" /></div>
+                    <div class="pj-req-item"><span class="pj-req-bullet">&#9679;</span><input type="text" placeholder="e.g. 3+ years of relevant experience" /></div>
+                </div>
+                <button class="btn-add-more" onclick="var l=document.getElementById('req-list');var d=document.createElement('div');d.className='pj-req-item';d.innerHTML='<span class=\'pj-req-bullet\'>&#9679;</span><input type=\'text\' placeholder=\'Add requirement...\' />';l.appendChild(d);d.querySelector('input').focus();">+ Add Requirement</button>
+            </div>
+            <hr class="pj-divider" />
+            <div>
+                <div class="pj-section-title"><i class="fas fa-file-alt"></i> Required Documents</div>
+                <div class="pj-docs-list" id="docs-list">
+                    <div class="pj-doc-item"><i class="fas fa-file-pdf"></i><input type="text" placeholder="e.g. Updated Resume" /></div>
+                    <div class="pj-doc-item"><i class="fas fa-file-archive"></i><input type="text" placeholder="e.g. Portfolio (PDF)" /></div>
+                    <div class="pj-doc-item"><i class="fas fa-certificate"></i><input type="text" placeholder="e.g. Certifications" /></div>
+                </div>
+                <button class="btn-add-more" onclick="var l=document.getElementById('docs-list');var d=document.createElement('div');d.className='pj-doc-item';d.innerHTML='<i class=\'fas fa-file\'></i><input type=\'text\' placeholder=\'Add document...\' />';l.appendChild(d);d.querySelector('input').focus();">+ Add Document</button>
+            </div>
+        </div>
+        <div class="pj-footer">
+            <a href="#" class="btn-pj-cancel">Cancel</a>
+            <button class="btn-pj-submit">Post Job</button>
+        </div>
+    </div>
+</div>
+
+
+    <div id="postjob-modal" class="pj-overlay">
+        <div class="pj-modal">
+
+            <!-- Header -->
+            <div class="pj-header">
+                <div class="pj-logo-box">
+                    <i class="fas fa-building"></i>
+                </div>
+                <div>
+                    <div class="pj-company-name">Post a New Job</div>
+                    <div class="pj-job-title">Fill in the details below</div>
+                </div>
+                <a href="#" class="pj-close" title="Close">&times;</a>
+            </div>
+
+            <!-- Body -->
+            <div class="pj-body">
+
+                <!-- Info Grid -->
+                <div class="pj-info-grid">
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-building"></i> Company Name</div>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-briefcase"></i> Job Title</div>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-map-marker-alt"></i> Location</div>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-dollar-sign"></i> Salary</div>
+                        <input type="text" placeholder="" />
+                    </div>
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-clock"></i> Job Type</div>
+                        <select>
+                            <option value="">Select...</option>
+                            <option>Full-time</option>
+                            <option>Part-time</option>
+                            <option>Contract</option>
+                            <option>Internship</option>
+                            <option>Freelance</option>
+                        </select>
+                    </div>
+                    <div class="pj-info-item">
+                        <div class="pj-info-label"><i class="fas fa-laptop-house"></i> Work Arrangement</div>
+                        <select>
+                            <option value="">Select...</option>
+                            <option>On-site</option>
+                            <option>Remote</option>
+                            <option>Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr class="pj-divider" />
+
+                <!-- Company Location -->
+                <div>
+                    <div class="pj-section-title">
+                        <i class="fas fa-map-marked-alt"></i> Company Location
+                    </div>
+                    <div class="pj-map-wrap">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209003.43!2d135.3413!3d34.6937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e8f61e51b97f%3A0xb7c18c659baad62a!2sOsaka%2C%20Japan!5e0!3m2!1sen!2sus!4v1700000000000"
+                            allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="pj-address-bar">
+                        <div class="pj-address-left">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div style="flex:1;">
+                                <div class="pj-addr-name">Office Address</div>
+                                <input type="text" placeholder="e.g. 2-1 Osaki, Shinagawa, Tokyo 141-0032, Japan" />
+                            </div>
+                        </div>
+                        
+                        <a href="https://www.google.com/maps/search/Japan+Tokyo"
+                           target="_blank" class="btn-directions">
+                            <i class="fas fa-directions"></i> Get Directions
+                        </a>
+                    </div>
+                </div>
+
+                <hr class="pj-divider" />
+
+                <!-- Requirements -->
+                <div>
+                    <div class="pj-section-title">
+                        <i class="fas fa-list-ul"></i> Requirements
+                    </div>
+                    <div class="pj-req-list">
+                        <div class="pj-req-item">
+                            <span class="pj-req-bullet">&#9679;</span>
+                            <input type="text" placeholder="e.g. Bachelor's degree in Computer Science" />
+                        </div>
+                        <div class="pj-req-item">
+                            <span class="pj-req-bullet">&#9679;</span>
+                            <input type="text" placeholder="e.g. 3+ years of relevant experience" />
+                        </div>
+                        <div class="pj-req-item">
+                            <span class="pj-req-bullet">&#9679;</span>
+                            <input type="text" placeholder="e.g. Strong communication skills" />
+                        </div>
+                        <div class="pj-req-item">
+                            <span class="pj-req-bullet">&#9679;</span>
+                            <input type="text" placeholder="Add requirement..." />
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="pj-divider" />
+
+                
+                <div>
+                    <div class="pj-section-title">
+                        <i class="fas fa-file-alt"></i> Required Documents
+                    </div>
+                    <div class="pj-docs-list">
+                        <div class="pj-doc-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <input type="text" placeholder="e.g. Updated Resume" />
+                        </div>
+                        <div class="pj-doc-item">
+                            <i class="fas fa-file-archive"></i>
+                            <input type="text" placeholder="e.g. Portfolio (PDF)" />
+                        </div>
+                        <div class="pj-doc-item">
+                            <i class="fas fa-certificate"></i>
+                            <input type="text" placeholder="e.g. Certifications" />
+                        </div>
+                        <div class="pj-doc-item">
+                            <i class="fas fa-file"></i>
+                            <input type="text" placeholder="Add document..." />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            
+            <div class="pj-footer">
+                <a href="#" class="btn-pj-cancel">Cancel</a>
+                <button class="#" type="btn-pj-submit">Post Job</button>
+            </div>
+
+        </div>
+    </div>
 
 </body>
 </html>
