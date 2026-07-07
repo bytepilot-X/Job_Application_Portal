@@ -1957,3 +1957,468 @@ body {
         font-size: 9px; 
     }
 }
+
+
+/*MODAL*/
+.pj-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 9999;
+    background: rgba(0, 0, 0, 0.55);
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 16px 40px;
+    overflow-y: auto;
+}
+.pj-overlay:target { display: flex; }
+
+/* modal card */
+.pj-modal {
+    background: white;
+    border-radius: 12px;
+    width: 100%; max-width: 460px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.28);
+    overflow: hidden;
+    position: relative;
+    animation: pjSlide 0.22s ease;
+}
+@keyframes pjSlide {
+    from { 
+        opacity: 0; 
+        transform: translateY(-18px); 
+    }
+    to   { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+
+/* header */
+.pj-header {
+    background: #04ABFF;
+    padding: 16px 18px;
+    display: flex; align-items: center; gap: 14px;
+}
+.pj-logo-box {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 8px;
+    background: white; 
+    border: 2px solid rgba(255,255,255,0.5);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.pj-logo-box i { 
+    font-size: 24px; 
+    color: #04ABFF; 
+}
+
+.pj-company-name { 
+    font-size: 16px; 
+    font-weight: 900; 
+    color: white; 
+}
+
+.pj-job-title    { 
+    font-size: 12px; 
+    color: rgba(255,255,255,0.88); 
+    font-weight: 600; margin-top: 3px; 
+}
+
+/* close × */
+.pj-close {
+    position: absolute; 
+    top: 10px;
+    right: 12px;
+    width: 28px; 
+    height: 28px; 
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    color: white; 
+    font-size: 18px; 
+    font-weight: 700;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none; 
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.pj-close:hover { 
+    background: rgba(255,255,255,0.45); 
+}
+
+/* scrollable */
+.pj-body {
+    padding: 18px 20px;
+    display: flex; flex-direction: column; 
+    gap: 16px;
+    max-height: 72vh; 
+    overflow-y: auto;
+}
+.pj-body::-webkit-scrollbar { 
+    width: 5px;
+}
+.pj-body::-webkit-scrollbar-thumb { 
+    background: #ccc; 
+    border-radius: 4px; 
+}
+
+
+.pj-info-grid { 
+    display: grid; 
+    Grid-template-columns: 1fr 1fr; 
+    gap: 10px; 
+}
+
+.pj-info-item {
+    border: 1.5px solid #e0e0e0; 
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex; 
+    flex-direction: column; 
+    gap: 5px;
+    transition: border-color 0.2s;
+}
+.pj-info-item:focus-within { 
+    border-color: #04ABFF; 
+}
+
+.pj-info-label {
+    font-size: 9px; 
+    font-weight: 700; 
+    color: #999;
+    text-transform: uppercase; 
+    letter-spacing: 0.8px;
+    display: flex; align-items: center; 
+    gap: 5px;
+}
+.pj-info-label i { 
+    font-size: 10px; 
+    color: #04ABFF; 
+}
+
+.pj-info-item input, .pj-info-item select {
+    border: none; 
+    outline: none;
+    font-size: 13px; 
+    font-weight: 700; 
+    color: #111;
+    background: transparent; 
+    width: 100%; 
+    padding: 0;
+}
+.pj-info-item input::placeholder { 
+    color: #bbb; 
+    font-weight: 400; 
+}
+.pj-info-item select { 
+    cursor: pointer; 
+}
+
+/* divider */
+.pj-divider { 
+    border: none; 
+    border-top: 1.5px 
+    solid #f0f0f0; 
+    margin: 0; 
+}
+
+/* section headings */
+.pj-section-title {
+    font-size: 14px; 
+    font-weight: 800; 
+    color: #111;
+    margin-bottom: 10px;
+    display: flex; 
+    align-items: center; 
+    gap: 7px;
+}
+
+.pj-section-title i { 
+    color: #04ABFF; 
+    font-size: 15px; 
+}
+
+/* google maps embed */
+.pj-map-wrap { 
+    border-radius: 8px; 
+    overflow: hidden; 
+    border: 1.5px solid #e0e0e0; 
+}
+.pj-map-wrap iframe { 
+    width: 100%; 
+    height: 185px; 
+    display: block; 
+    border: none; 
+}
+
+/* address bar */
+.pj-address-bar {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    gap: 10px; 
+    border: 1.5px solid #e0e0e0; 
+    border-radius: 8px;
+    padding: 10px 14px; 
+    margin-top: 10px;
+    transition: border-color 0.2s;
+}
+
+.pj-address-bar:focus-within { 
+    border-color: #04ABFF; 
+}
+
+.pj-address-left { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 8px; 
+    flex: 1; 
+}
+
+.pj-address-left > i { 
+    color: #04ABFF; 
+    font-size: 16px; 
+    margin-top: 1px; 
+    flex-shrink: 0; 
+}
+
+.pj-addr-name { 
+    font-size: 11px; 
+    font-weight: 800; 
+    color: #111; 
+    margin-bottom: 2px; 
+}
+
+.pj-address-left input {
+    border: none; 
+    outline: none;
+    font-size: 11px; 
+    color: #555;
+    background: transparent; 
+    width: 100%; 
+    padding: 2px 0;
+}
+
+.pj-address-left input::placeholder { 
+    color: #bbb; 
+}
+
+/* get directions */
+.btn-directions {
+    background: #04ABFF; 
+    color: white; 
+    border: none;
+    border-radius: 6px; 
+    padding: 7px 12px;
+    font-size: 11px; 
+    font-weight: 700;
+    white-space: nowrap; 
+    flex-shrink: 0;
+    text-decoration: none;
+    display: inline-flex; 
+    align-items: center; 
+    gap: 5px;
+    transition: background 0.2s;
+}
+.btn-directions:hover { 
+    background: #0090dd; 
+}
+
+/* requirements rows */
+.pj-req-list { 
+    display: flex; 
+    flex-direction: 
+    column; gap: 7px; 
+}
+
+.pj-req-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 9px; 
+}
+
+.pj-req-bullet { 
+    color: #04ABFF; 
+    font-size: 7px; 
+    flex-shrink: 0; 
+}
+
+.pj-req-item input {
+    border: none; 
+    border-bottom: 1.5px dashed #ddd;
+    outline: none; 
+    font-size: 13px; 
+    color: #333;
+    background: transparent; 
+    width: 100%; 
+    padding: 3px 0;
+    transition: border-color 0.2s;
+}
+
+.pj-req-item input:focus  { 
+    border-color: #04ABFF; 
+}
+.pj-req-item input::placeholder { 
+    color: #bbb; 
+}
+
+/* required documents rows */
+.pj-docs-list { 
+    display: flex; 
+    flex-direction: 
+    column; gap: 9px; 
+}
+.pj-doc-item  { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.pj-doc-item > i { 
+    color: #04ABFF; 
+    font-size: 16px; 
+    flex-shrink: 0; 
+}
+
+.pj-doc-item input {
+    border: none; 
+    border-bottom: 1.5px dashed #ddd;
+    outline: none; 
+    font-size: 13px; 
+    color: #333;
+    background: transparent; 
+    width: 100%; 
+    padding: 3px 0;
+    transition: border-color 0.2s;
+}
+
+.pj-doc-item input:focus  { 
+    border-color: #04ABFF; 
+}
+
+.pj-doc-item input::placeholder { 
+    color: #bbb; 
+}
+
+/* footer */
+.pj-footer {
+    padding: 14px 20px 18px;
+    display: flex; 
+    gap: 10px;
+    border-top: 1.5px solid #f0f0f0;
+}
+.btn-pj-cancel {
+    flex: 1; 
+    background: white; 
+    color: #666;
+    border: 1.5px solid #ccc; 
+    border-radius: 7px;
+    padding: 11px 0; 
+    font-size: 13px; 
+    font-weight: 700;
+    cursor: pointer; 
+    text-decoration: none; 
+    text-align: center;
+    transition: background 0.2s;
+}
+.btn-pj-cancel:hover { 
+    background: #f5f5f5; 
+}
+.btn-pj-submit {
+    flex: 2;
+    background: #04ABFF;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 0;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.btn-pj-submit:hover { 
+    background: #0090dd; 
+}
+
+
+
+
+/* Interview Modal*/
+
+.iv-full {
+    width: 100%;
+}
+
+.iv-modal { 
+    max-width: 480px; 
+}
+
+
+.iv-meeting-box {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: border-color 0.2s;
+}
+.iv-meeting-box:focus-within { 
+    border-color: #04ABFF; 
+}
+
+.iv-meeting-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #04ABFF;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+.iv-meeting-header i { 
+    font-size: 14px; 
+}
+
+.iv-meeting-input {
+    border: none;
+    border-bottom: 1.5px dashed #ddd;
+    outline: none;
+    font-size: 13px;
+    color: #333;
+    background: transparent;
+    width: 100%;
+    padding: 4px 0;
+    transition: border-color 0.2s;
+}
+.iv-meeting-input:focus { 
+    border-color: #04ABFF; 
+}
+
+.iv-meeting-input::placeholder { 
+    color: #bbb; 
+}
+
+.iv-meeting-hint {
+    font-size: 11px;
+    color: #aaa;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.iv-meeting-hint i { 
+    color: #04ABFF; 
+    font-size: 11px; 
+}
